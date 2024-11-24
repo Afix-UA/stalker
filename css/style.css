@@ -134,6 +134,9 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
+body {
+  background: url(../img/v-mask.webp) 0 0/cover no-repeat
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
