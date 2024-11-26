@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241125011221">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241126163547">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,20 +54,88 @@
 
 				</div>
 				<div class="header__action">
-					<button type="button" class="header__button button-buy _icon-cart"> <span>купити</span></button>
+					<button type="button" class="header__button button-buy">
+						<div class="button-buy__body">
+							<div class="button-buy__basket">
+								<span class="_icon-cart"></span>
+							</div>
+							<span class="_icon-dropdown-light">купити</span>
+							<div class="button-buy__body-list">
+								<ul class="button-buy__list">
+									<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam"> <span>steam</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms"> <span>ms store</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs"> <span>epic games</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog"> <span>gog.com</span></a></li>
+								</ul>
+							</div>
+						</div>
+
+					</button>
+
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 				</div>
 			</div>
 		</header>
 		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<img class="hero__logo" src="img/logo-S2.webp" alt="Logo">
+					<div class="hero__action action-hero">
+						<button type="button" class="action-hero__button button-buy ">
+							<div class="button-buy__body">
+								<div class="button-buy__basket">
+									<span class="_icon-cart"></span>
+								</div>
+								<span class="_icon-dropdown-light">купити</span>
+								<div class="button-buy__body-list">
+									<ul class="button-buy__list">
+										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
+												<span>steam</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
+												<span>ms store</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs">
+												<span>epic games</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog">
+												<span>gog.com</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</button>
+						<button type="button" class="action-hero__button button-buy button-buy--grey">
+							<div class="button-buy__body">
+								<div class="button-buy__basket">
+									<span class="_icon-favorite"></span>
+								</div>
+								<span class="_icon-dropdown-light">купити</span>
+								<div class="button-buy__body-list">
+									<ul class="button-buy__list">
+										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
+												<span>steam</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
+												<span>ms
+													store</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs">
+												<span>epic games</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog">
+												<span>gog.com</span></a></li>
+									</ul>
+								</div>
+							</div>
 
+						</button>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241125011221"></script>
+	<script src="js/app.min.js?_v=20241126163547"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,regular,500&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rubik:regular&display=swap);
 @font-face {
   font-family: icons;
@@ -356,32 +356,50 @@ body {
   object-fit: contain
 }
 .button-buy {
+  font-family: Oswald,sans-serif;
+  min-width: 10.875rem;
+  overflow: hidden;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  display: flex
+}
+.button-buy__body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-family: Oswald,sans-serif;
+  position: relative;
+  z-index: 2;
+  color: #000
+}
+.button-buy__body>span {
+  width: 100%;
   display: flex;
   gap: 1.25rem;
   align-items: center;
-  font-family: Oswald,sans-serif;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   font-size: 1.25rem;
   min-width: 6.875rem;
-  background: #f2e8d9;
   border-radius: 0 3px 0 0;
-  position: relative
-}
-.button-buy span {
-  color: #000;
+  background-color: #f2e8d9;
+  padding: .875rem 1.875rem;
+  padding-right: 0;
+  padding-top: .375rem;
+  position: relative;
+  z-index: 2;
   line-height: 1
 }
-.button-buy::before {
-  margin-left: -.9375rem;
-  color: #000;
-  font-size: 1.25rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../img/btn/orange-before-patch.svg) 0 0/contain no-repeat
+.button-buy__body>span::before {
+  transition: all .3s;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-bottom: .3125rem;
+  padding-top: 0;
+  font-size: .625rem
 }
-.button-buy::after {
+.button-buy__body>span::after {
   content: "";
   background: url(../img/btn/light-after.svg) 0 0 no-repeat;
   position: absolute;
@@ -389,6 +407,147 @@ body {
   height: 100%;
   top: 0;
   left: 100%
+}
+.button-buy__basket {
+  margin-left: -.9375rem;
+  color: #000;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3
+}
+.button-buy__basket span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  min-width: 100%;
+  min-height: 2.5rem;
+  position: relative;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 41%,#e4991a 44%);
+  z-index: 2
+}
+.button-buy__basket span::before {
+  transition: padding-left .3s
+}
+.button-buy__basket span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: -1;
+  background: url(../img/btn/orange-before-patch.svg) 0 0/cover no-repeat
+}
+.button-buy__basket::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 15px solid #ee991a;
+  border-bottom: 20px solid transparent;
+  z-index: 1;
+  -webkit-filter: drop-shadow(1px 2px 1px #000);
+  filter: drop-shadow(1px 2px 1px #000);
+  transition: all .3s
+}
+.button-buy__body-list {
+  box-shadow: inset 1px 3px 4px 1px rgba(0,0,0,.3490196078);
+  padding: 1.25rem .625rem;
+  background: #f2e8d9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: all .3s;
+  z-index: 1
+}
+.button-buy__list {
+  display: grid;
+  gap: .625rem
+}
+.button-buy__link {
+  text-transform: uppercase;
+  display: flex;
+  gap: .9375rem;
+  transition: opacity .3s;
+  opacity: .7;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-wrap: nowrap
+}
+.button-buy__link::before {
+  color: #000;
+  font-size: 1.25rem;
+  text-align: left
+}
+.button-buy--grey {
+  color: #f2e8d9
+}
+.button-buy--grey .button-buy__body {
+  color: #f2e8d9
+}
+.button-buy--grey .button-buy__body>span {
+  background-color: #333
+}
+.button-buy--grey .button-buy__body>span::after {
+  background: url(../img/btn/grey-after.svg) 0 0 no-repeat
+}
+.button-buy--grey .button-buy__basket span {
+  color: #f2e8d9;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 41%,#e4991a 44%)
+}
+.button-buy--grey .button-buy__basket span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: -1;
+  background: url(../img/btn/grey-before.svg) 0 0/cover no-repeat
+}
+.button-buy--grey .button-buy__basket::after {
+  width: 0;
+  height: 0;
+  opacity: 0
+}
+.button-buy--grey .button-buy__body-list {
+  background-color: #333
+}
+.button-buy--grey .button-buy__link::before {
+  color: #f2e8d9;
+  font-size: 1.25rem;
+  text-align: left
+}
+.button-buy--grey::after {
+  content: "";
+  background: url(../img/btn/grey-after.svg) 0 0 no-repeat
+}
+.button-buy--grey>span {
+  background-color: #333
+}
+.button-buy--grey .button-buy__basket span {
+  background: url(../img/btn/grey-before.svg) 0 0/cover no-repeat
+}
+.button-buy--grey .button-buy__basket::after {
+  display: none
 }
 .header {
   width: 100%;
@@ -415,6 +574,9 @@ body {
   font-size: 1.25rem;
   transition: all .3s;
   opacity: .7
+}
+.header__social._dynamic_adapt_ {
+  justify-content: center
 }
 .logo {
   display: flex;
@@ -454,6 +616,34 @@ body {
   -o-object-position: top;
   object-position: top
 }
+.page {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2
+}
+.hero__logo {
+  width: 100%;
+  max-width: 34.125rem;
+  aspect-ratio: 546/187
+}
+.hero__logo:not(:last-child) {
+  margin-bottom: .625rem
+}
+.hero__action {
+  padding: 2.5rem .625rem
+}
+.action-hero {
+  display: flex;
+  justify-content: center;
+  gap: 3.75rem
+}
+.action-hero__button .button-buy__body-list {
+  box-shadow: inset 0 -3px 4px 1px rgba(0,0,0,.3490196078);
+  transition: all .3s
+}
 @media (min-width:95.75em) {
   .header__social:not(:last-child) {
     margin-right: 3.5rem
@@ -464,7 +654,7 @@ body {
     margin-right: 1.25rem
   }
 }
-@media (max-width:61.99875em) {
+@media (max-width:95.75em) {
   .menu__body {
     display: flex;
     flex-direction: column;
@@ -474,7 +664,8 @@ body {
     left: -100%;
     top: 0;
     overflow: auto;
-    padding: 5rem .9375rem 1.875rem 1.875rem;
+    background-color: rgba(0,0,0,.6392156863);
+    padding: 5rem 1.875rem 1.875rem 1.875rem;
     transition: left .3s
   }
   .menu__body::before {
@@ -496,6 +687,7 @@ body {
     left: 0
   }
   .menu__list {
+    align-items: flex-end;
     flex-direction: column;
     flex: 1 1 100%
   }
@@ -548,8 +740,11 @@ body {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
   }
-  .header__logo .logo__game {
-    display: none
+  .header__logo .logo__company {
+    width: 3.4375rem
+  }
+  .header__logo {
+    z-index: 100
   }
   .header__social a {
     font-size: 1.875rem
@@ -557,17 +752,27 @@ body {
   .header__button {
     display: none
   }
-  .logo__company {
-    width: 3.4375rem;
-    z-index: 100
+}
+@media (max-width:95.75em)and (any-hover:none) {
+  .icon-menu {
+    cursor: default
+  }
+}
+@media (max-width:61.99875em) {
+  .header__logo .logo__game {
+    display: none
   }
   .social {
     z-index: 100
   }
 }
-@media (max-width:61.99875em)and (any-hover:none) {
-  .icon-menu {
-    cursor: default
+@media (max-width:47.99875em) {
+  .action-hero {
+    flex-wrap: wrap;
+    gap: 1.25rem
+  }
+  .action-hero__button {
+    width: 100%
   }
 }
 @media (max-width:29.99875em) {
@@ -595,8 +800,39 @@ body {
     left: 0;
     right: auto
   }
+  .button-buy__link:hover {
+    opacity: 1
+  }
+  .button-buy:hover {
+    transition: all .1s;
+    overflow: visible
+  }
+  .button-buy:hover .button-buy__body>span::before {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    padding-bottom: 0;
+    padding-top: .3125rem;
+    font-size: .625rem
+  }
+  .button-buy:hover .button-buy__body-list {
+    top: 101%;
+    opacity: 1;
+    visibility: visible;
+    height: auto
+  }
+  .button-buy:hover .button-buy__basket::after {
+    right: -15px;
+    border-left: 15px solid #ee991a
+  }
+  .button-buy:hover .button-buy__basket span::before {
+    padding-left: .625rem
+  }
   .header__social a:hover {
     color: #fff;
     opacity: 1
+  }
+  .action-hero__button:hover .button-buy__body-list {
+    top: auto;
+    bottom: 100%
   }
 }
