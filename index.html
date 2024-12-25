@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"STALKER"
+})
+
+<body>
+
+	<div class="wrapper">
+		<video class="bg-video" preload="auto" loop playsinline -webkit-playsinline muted autoplay
+			video-autoplay="true">
+			<source src="@img/bg-video/20svideo.webm" type="video/webm">
+		</video>
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<img class="hero__logo" src="@img/logo-S2.png" alt="Logo">
+					<div class="hero__action action-hero">
+						<button type="button" class="action-hero__button button-buy ">
+							<div class="button-buy__body">
+								<div class="button-buy__basket">
+									<span class="_icon-cart"></span>
+								</div>
+								<span class="_icon-dropdown-light">купити</span>
+								<div class="button-buy__body-list">
+									<ul class="button-buy__list">
+										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
+												<span>steam</span></a></li>
+										<li class="button-buy__item"><a href="#"
+												class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
+												<span>ms store</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs">
+												<span>epic games</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog">
+												<span>gog.com</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</button>
+						<button type="button" class="action-hero__button button-buy button-buy--grey">
+							<div class="button-buy__body">
+								<div class="button-buy__basket">
+									<span class="_icon-favorite"></span>
+								</div>
+								<span class="_icon-dropdown-light">купити</span>
+								<div class="button-buy__body-list">
+									<ul class="button-buy__list">
+										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
+												<span>steam</span></a></li>
+										<li class="button-buy__item"><a href="#"
+												class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
+												<span>ms
+													store</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs">
+												<span>epic games</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog">
+												<span>gog.com</span></a></li>
+									</ul>
+								</div>
+							</div>
+
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
