@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"STALKER"
-})
+
+<head>
+	<title>STALKER</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250101212306">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 
 	<div class="wrapper">
-		<video class="bg-video" preload="auto" loop playsinline -webkit-playsinline muted autoplay
-			video-autoplay="true">
-			<source src="@img/bg-video/20svideo.webm" type="video/webm">
+		<video class="bg-video" preload="auto" loop playsinline -webkit-playsinline muted autoplay video-autoplay="true">
+			<source src="img/bg-video/20svideo.webm" type="video/webm">
 		</video>
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					<a href="#" class="logo__company"><img src="img/gsc_logo_white.svg" alt="Logo"></a>
+					<a href="#" class="logo__game"><img src="img/logo-S2.webp" alt="Logo"></a>
+				</div>
+
+				<div class="header__menu menu">
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">DIGITAL</a></li>
+							<li class="menu__item"><a href="" class="menu__link">PHYSICAL</a></li>
+							<li class="menu__item"><a href="" class="menu__link">NEWS</a></li>
+							<li class="menu__item"><a href="" class="menu__link">SUPPORT</a></li>
+						</ul>
+					</nav>
+				</div>
+				<ul data-da=".menu__body,991.98,last" class="header__social social">
+					<li class="social__item"><a href="#" aria-label="discord" class="social__link _icon-discord"></a></li>
+					<li class="social__item"><a href="#" aria-label="facebook" class="social__link _icon-facebook"></a></li>
+					<li class="social__item"><a href="#" aria-label="x" class="social__link _icon-x"></a></li>
+					<li class="social__item"><a href="#" aria-label="instagram" class="social__link _icon-instagram"></a></li>
+					<li class="social__item"><a href="#" aria-label="youtube" class="social__link _icon-youtube"></a></li>
+					<li class="social__item"><a href="#" aria-label="reddit" class="social__link _icon-reddit"></a></li>
+				</ul>
+				<div class="header__land lang">
+					<select class="lang__select" name="form[]" data-class-modif="form">
+						<option value="1" selected>Українська</option>
+						<option value="2">English</option>
+						<option value="3">Čeština</option>
+						<option value="4">Deutsch</option>
+					</select>
+
+				</div>
+				<div class="header__action">
+					<button type="button" class="header__button button-buy">
+						<div class="button-buy__body">
+							<div class="button-buy__basket">
+								<span class="_icon-cart"></span>
+							</div>
+							<span class="_icon-dropdown-light">купити</span>
+							<div class="button-buy__body-list">
+								<ul class="button-buy__list">
+									<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam"> <span>steam</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms"> <span>ms store</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs"> <span>epic games</span></a></li>
+									<li class="button-buy__item"><a href="#" class="button-buy__link _icon-gog"> <span>gog.com</span></a></li>
+								</ul>
+							</div>
+						</div>
+
+					</button>
+
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section class="page__hero hero">
 				<div class="hero__container">
-					<img class="hero__logo" src="@img/logo-S2.png" alt="Logo">
+					<img class="hero__logo" src="img/logo-S2.webp" alt="Logo">
 					<div class="hero__action action-hero">
 						<button type="button" class="action-hero__button button-buy ">
 							<div class="button-buy__body">
@@ -27,8 +92,7 @@
 									<ul class="button-buy__list">
 										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
 												<span>steam</span></a></li>
-										<li class="button-buy__item"><a href="#"
-												class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
 										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
 												<span>ms store</span></a></li>
 										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-egs">
@@ -49,8 +113,7 @@
 									<ul class="button-buy__list">
 										<li class="button-buy__item "><a href="#" class="button-buy__link _icon-steam">
 												<span>steam</span></a></li>
-										<li class="button-buy__item"><a href="#"
-												class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
+										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-xbox"><span>xbox</span></a></li>
 										<li class="button-buy__item"><a href="#" class="button-buy__link _icon-ms">
 												<span>ms
 													store</span></a></li>
@@ -67,9 +130,12 @@
 				</div>
 			</section>
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20250101212306"></script>
 </body>
 
 </html>
